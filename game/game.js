@@ -47,17 +47,6 @@ class Game {
     this.paused = false;
     this.frameAdvance = false;
     this.loop = this.#loop.bind(this);
-
-    this.canvas.addEventListener("mousedown", (e) => {
-      // console.log("mousemove", e);
-      // const rect = this.canvas.getBoundingClientRect();
-      // const mouseX = e.clientX - rect.left;
-      // const mouseY = e.clientY - rect.top;
-      // const tileX = Math.floor(mouseX / TILE_SIZE);
-      // const tileY = Math.floor(mouseY / TILE_SIZE);
-      // const tile = this.tilemap.getTileAtPixel(tileX, tileY);
-      // console.log(`Mouse over tile: (${tileX}, ${tileY}) = '${tile}'`);
-    });
   }
 
   setBackgroundColor(color) {
