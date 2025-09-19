@@ -1,10 +1,10 @@
 import { input, inputPressed } from "../game/input.js";
-import { GameObject } from "./objBase.js";
+import { ObjBase } from "./objBase.js";
 import { ObjSandEffect } from "./objSandEffect.js";
 import { TILES } from "../game/game.js";
 import { Sprite } from "../game/sprite.js";
 
-class ObjPlayer extends GameObject {
+class ObjPlayer extends ObjBase {
   // Physics constants in full-pixels per frame
   // These values were observed from the original game RAM
   static WALK_SPEED = 1.5;

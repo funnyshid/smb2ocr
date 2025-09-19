@@ -1,4 +1,4 @@
-import { GameObject } from "../objects/objBase.js";
+import { ObjBase } from "../objects/objBase.js";
 import { ObjPlayer } from "../objects/objPlayer.js";
 import { input, inputPressed } from "./input.js";
 import { Tilemap } from "./tilemap.js";

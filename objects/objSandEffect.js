@@ -1,7 +1,7 @@
-import { GameObject } from "./objBase.js";
+import { ObjBase } from "./objBase.js";
 import { Sprite } from "../game/sprite.js";
 
-class ObjSandEffect extends GameObject {
+class ObjSandEffect extends ObjBase {
   static DESPAWN_TIME = 32;
   static CHANGE_IMAGE_TIME = 16;
   constructor(game, x, y) {

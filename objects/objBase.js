@@ -25,4 +25,4 @@ class ObjBase {
   }
 }
 
-export { ObjBase as GameObject };
+export { ObjBase };
