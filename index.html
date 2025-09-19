@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<div id="login-container">
+  <h1>Sign up</h1>
+  <button id="start-button" class="button">Begin</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script type="module" src="index.js"></script>
+<style>
+  :root {
+    --color-bg: #f3f4f8;
+    --color-text: #222;
+    --color-primary: #0045bc;
+    --color-primary-hover: rgb(0, 23, 104);
+    --color-danger: rgb(200, 0, 0);
+    --color-danger-hover: rgb(150, 0, 0);
+    --color-white: #fff;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-shadow-canvas: rgba(0, 0, 0, 0.2);
+    --color-border: #ccc;
+    --color-border-bottom: #0045bc;
+    --color-output-bg: #f9f9fb;
+    --color-output-text: #222;
+    --color-paragraph: #515151;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: sans-serif;
+    height: 100%;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #login-container {
+    background: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 0 12px var(--color-shadow);
+    display: inline-block;
+    text-align: center;
+    padding: 16px;
+  }
+  .button {
+    font-size: 16px;
+    padding: 8px 16px;
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    margin: 4px;
+    background: var(--color-primary);
+  }
+  .button:hover {
+    background: var(--color-primary-hover);
+  }
+  #reset-button {
+    background: var(--color-danger);
+  }
+  #reset-button:hover {
+    background: var(--color-danger-hover);
+  }
+  #submit-button,
+  #start-button {
+    background: var(--color-primary);
+  }
+  #submit-button:hover,
+  #start-button:hover {
+    background: var(--color-primary-hover);
+  }
+  p {
+    color: var(--color-paragraph);
+  }
+  #text-output {
+    width: 66%;
+    box-sizing: border-box;
+    border: 1px solid var(--color-border);
+    border-bottom: 2px solid var(--color-border-bottom);
+    border-radius: 4px 4px 0 0;
+    background: var(--color-output-bg);
+    color: var(--color-output-text);
+    font-size: 24px;
+    height: 40px;
+    padding: 8px;
+    margin-bottom: 12px;
+    pointer-events: none;
+    display: inline-block;
+    text-align: left;
+    outline: none;
+    user-select: none;
+  }
+  #gameCanvas {
+    image-rendering: pixelated;
+    border-radius: 8px;
+    box-shadow: 0 0 6px var(--color-shadow-canvas);
+    transform-origin: top left;
+    display: block;
+  }
+</style>
