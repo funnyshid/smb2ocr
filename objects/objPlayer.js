@@ -22,7 +22,7 @@ class ObjPlayer extends ObjBase {
   static TERMINAL_VELOCITY = 3.75; // In the actual game, this varies but is usually ~60 subpixels
 
   // Timer constants
-  static JUMP_BUFFER_WINDOW = 6; // There is no jump buffer in SMB2, but this is just a QoL addition
+  static JUMP_BUFFER_WINDOW = 6; // There is no jump buffer in original game, but this is just a QoL addition
   static CROUCH_JUMP_BUILDUP_TIME = 60;
   static DIG_DURATION = 14;
 
@@ -188,7 +188,7 @@ class ObjPlayer extends ObjBase {
     this.#updateFrameIndex();
     super.draw(ctx);
     if (this.crouchJumpBuildupTimer === ObjPlayer.CROUCH_JUMP_BUILDUP_TIME && this.game.frame % 2 === 0) {
-      this.drawFlashingPalette(ctx, Math.round(this.x), Math.round(this.y), this.sprite.frameWidth, this.sprite.frameHeight);
+      this.#drawFlashingPalette(ctx, Math.round(this.x), Math.round(this.y), this.sprite.frameWidth, this.sprite.frameHeight);
     }
   }
 
@@ -226,7 +226,7 @@ class ObjPlayer extends ObjBase {
   }
 
   // The flashing colors used when player can do a super crouch jump
-  drawFlashingPalette(ctx, x, y, width, height) {
+  #drawFlashingPalette(ctx, x, y, width, height) {
     // Get image data for the drawn area (this includes everything, not just the player)
     const imageData = ctx.getImageData(x, y, width, height);
     const data = imageData.data;
